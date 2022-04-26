@@ -4,11 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.preference.PreferenceManager
 import com.fornity.sosmed.databinding.ActivityLoginBinding
 import com.fornity.sosmed.model.form.Login
 import com.fornity.sosmed.network.LoginResponse
 import com.fornity.sosmed.ui.list.ListActivity
+import com.fornity.sosmed.ui.register.RegisterActivity
 import com.fornity.sosmed.util.AppPreference
 
 class LoginActivity : AppCompatActivity(), LoginContract {
@@ -40,6 +40,9 @@ class LoginActivity : AppCompatActivity(), LoginContract {
                     presenter.postLogin(data)
 
                 }
+            }
+            tvRegister.setOnClickListener{
+                startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
             }
         }
     }

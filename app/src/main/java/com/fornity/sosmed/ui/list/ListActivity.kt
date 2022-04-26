@@ -11,12 +11,16 @@ import com.fornity.sosmed.util.AppPreference
 class ListActivity : AppCompatActivity() {
     lateinit var binding: ActivityListBinding
     lateinit var preference: AppPreference
+//    private lateinit var listView ListView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         preference = AppPreference(this)
+
+
+
 
         binding.btLogout.setOnClickListener {
             preference.setAuth("")

@@ -26,7 +26,7 @@ data class User(
 	val email: String? = null
 )
 
-data class Data(
+data class PostData(
 
 	@field:SerializedName("user")
 	val user: User? = null,
